@@ -1,6 +1,36 @@
-* {
-    border: 1px solid red !important;
-}
+/* stylesheet for Jane Doette's Portfolio */
+
+/*  -------- Color Pallette ------------
+
+#f8fff4: cream | used for main headings and most paragraphs
+#3A3042: dark purple | used for area backgrounds, main header background, and paragraphs
+#846193: light purple | used for area backgrounds, buttons, and paragraphs
+#e75a7c: deep pink | used for rollovers and accents
+#17bebb: turquoise | used for area backgrounds and accents
+
+*/
+
+/* -------- Fonts ---------------------
+
+Blackjack:  display font | used for name
+Questrial:   sans-serif font | used for heading and paragraphs
+
+/*---------- Table of Contents----------
+
+- Base Styles
+- Grid
+- Sections
+    - Header
+    - Display Image
+    - Featured Work
+*/
+
+
+/***** BASE STYLES *****/
+
+/* *{
+    border: 1px solid gray !important;
+}*/
 
 * {
     -webkit-box-sizing: border-box;
@@ -9,16 +39,27 @@
     box-sizing: border-box;
 }
 
+body {
+  background-color: #f8fff4;
+  color: #3A3042;
+  font-family: "Questrial", sans-serif;
+  font-size: 16px;
+}
+
+/***** GRID *****/
+
 .grid {
     margin: 0 auto;
     max-width: 1200px;
-    width: 100%;
+    width: 75%;
 }
 
 .row {
-    width: 100%;
-    margin-bottom: 20px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
 .col-1 {
@@ -67,4 +108,65 @@
 
 .col-12 {
     width: 100%;
+}
+
+/***** SECTIONS *****/
+
+/*---Header---*/
+header {
+  border-bottom: 5px solid #846193;
+}
+
+#logo img {
+  max-width: 150px;
+}
+
+#name,
+#title {
+  max-height: 75px;
+  justify-content: flex-end;
+}
+
+#name {
+  font-family: "Blackjack", cursive;
+  font-size: 2.25em;
+  font-weight: normal;
+  margin-bottom: 0;
+  text-transform: lowercase;
+}
+
+#title {
+  font-weight: normal;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+/*---Display Image---*/
+
+#display-img img {
+  max-width: 100%;
+}
+
+/*---Featured Work---*/
+#featured-work-title {
+  color: #846193;
+  font-size: 1.5em;
+  margin-bottom: 0;
+}
+
+.project-image{
+  margin: 0 auto;
+}
+
+.project-title {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.project-url a {
+  color: #846193;
+  margin-top: 0;
+  text-decoration: none;
 }
